@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tìm giá trị nhỏ nhất của mảng</title>
+</head>
+<body>
+<script>
+    let arr1= [7, 12, 6, 9, 20, 56, 89];
+    function findMinOfArray(arr) {
+        if(arr.length == 0){
+            return -1;
+        }
+
+        let min=arr[0];
+        let index = -1;
+        for(let i=1;i<arr.length;i++){
+            if(min>arr[i]){
+                min = arr[i];
+                index =i;
+            }
+        }
+        return index;
+    }
+   if(findMinOfArray(arr1)== -1){
+       document.write("mảng rỗng");
+   }else {
+       document.write(arr1[findMinOfArray(arr1)]);
+   }
+</script>
+</body>
+</html>
