@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tìm chòm sao</title>
+</head>
+<body>
+<script>
+    let star= ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe" , "Regulus"];
+    let war =["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+    let yonin= prompt("nhập tên ngôi sao bạn tìm:");
+    let index = -1;
+    function findStar() {
+        for(let i=0;i<7;i++){
+            if(yonin == star[i]){
+                alert("ngôi sao bạn tìm thuộc chòm sao: "+war[i]);
+                index = -1;
+                break;
+            }else if(yonin.length == 0){
+                alert("bạn chưa nhập tên chòm sao!");
+                break;
+            }else {
+                index =i;
+            }
+        }
+        if (index!= -1){
+            alert("không có sao nào tên như vậy");
+        }
+    }
+    window.onload = findStar();
+</script>
+</body>
+</html>
